@@ -10,10 +10,10 @@ For making REST API, I am using Django==4.2.14 and Django REST Framewok. And cal
   },
 ```
 #### Backend
-'''
+```
 asgiref==3.8.1
 Django==4.2.14
 sqlparse==0.5.1
 typing_extensions==4.12.2
 tzdata==2024.1
-'''
+```

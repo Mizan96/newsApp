@@ -1,8 +1,13 @@
 import React from 'react'
+import TopBar from '../components/TopBar'
+import Bottom from '../components/Bottom'
 
 function NewsDetailsScreen() {
   return (
-    <div>NewsDetailsScreen</div>
+    <>
+    <TopBar />
+    <Bottom />
+    </>
   )
 }
 

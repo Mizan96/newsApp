@@ -6,11 +6,11 @@ function AboveTop() {
   const daysName = ["শনিবার", "রবিবার", "সোমবার", "মঙ্গলবার", "বুধবার", "বৃহস্পতিবার", "শুক্রবার"]
   return (
     <>
-    <div className='bg-eeeded'>
-
-    {/* <p>Hello</p> */}
-    </div>
-    <div className='border-top border-warning py-3 px-5 border-5'>
+    <div className='border-bottom py-3 px-5  bg-eeeded '>
+      <br />
+      <br />
+      <br />
+      <br />
         <Container>
          <span className='text-primary fw-bold display-6'>দৈনিক বার্তা</span>
         <p>{daysName[currentTime.getDay()+1]} | জুলাই ৩১, ২০২৪  </p>

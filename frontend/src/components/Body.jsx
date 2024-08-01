@@ -3,6 +3,7 @@ import TabContainer  from './body/TabContent'
 import { Col, Container, Row} from 'react-bootstrap'
 import Slider from './body/Slider'
 import NewsList from './body/NewsList'
+import Videos from './Videos'
 
 function Body() {
   const arr = [1,2,3,4,5,6,7,8]
@@ -19,7 +20,7 @@ function Body() {
             </Col>
         </Row>
         
-        <Row>
+        <Row className='border-bottom p-2'>
           <p className='display-6 text-primary'>Latest News</p>
           {arr.map(item => 
             <Col lg={3} className='my-2'>
@@ -27,9 +28,18 @@ function Body() {
             </Col>
           )}
           </Row>
+          
+          <Row>
+            <Container>
+            <p className='display-6 text-primary'>Videos</p>
+
+            <Videos />
+            <Videos />
+            <Videos />
+            </Container>
+          </Row>
         
     </Container>
-    <h1>Hello World</h1>
     </div>
 
   )

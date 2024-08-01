@@ -7,7 +7,7 @@ function TabContent() {
     <Tabs
       defaultActiveKey="profile"
       id="fill-tab-example"
-      className="mb-3"
+      className="m-3"
       fill
     >
       <Tab eventKey="home" title="Home">

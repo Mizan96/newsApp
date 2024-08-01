@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import AboveTop from './AboveTop';
 import ModalContainer from './ModalContainer';
 import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 // import Navbar from 'react-bootstrap/Navbar';
 
 function TopBar() {
@@ -14,22 +15,38 @@ function TopBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home"> সর্বশেষ </Nav.Link>
-            <Nav.Link href="#home">বাংলাদেশ</Nav.Link>
-            <Nav.Link href="#home">অর্থনীতি</Nav.Link>
-            <Nav.Link href="#home">মতামত</Nav.Link>
+            <LinkContainer to="/news">
+              <Nav.Link> সর্বশেষ </Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/news">  
+            <Nav.Link >বাংলাদেশ</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/news">
+            <Nav.Link >অর্থনীতি</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/news">
+            <Nav.Link>মতামত</Nav.Link>
+            </LinkContainer>
             <NavDropdown title="বিশ্ব" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">বিশ্ব</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <LinkContainer to="/news">
+              <NavDropdown.Item >বিশ্ব</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to='/news'>
+              <NavDropdown.Item >
               বিশ্ব
               </NavDropdown.Item>
+              </LinkContainer>
               <NavDropdown.Item href="#action/3.3"></NavDropdown.Item>
               <NavDropdown.Divider />
+              <LinkContainer to="/news">
               <NavDropdown.Item href="#action/3.4">
               বিশ্ব
               </NavDropdown.Item>
+              </LinkContainer>
             </NavDropdown>
-            <Nav.Link href="#home">মতামত</Nav.Link>
+            <LinkContainer to="/news">
+            <Nav.Link>মতামত</Nav.Link>
+            </LinkContainer>
           </Nav>
         <ModalContainer />
         </Navbar.Collapse>

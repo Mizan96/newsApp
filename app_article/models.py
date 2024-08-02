@@ -30,13 +30,17 @@ class NewsModel(models.Model):
     def __str__(self):
         return self.title + ' - Published: ' + str(self.pub_date) + ' - Updated : ' + str(self.update_date)
     
-# class VideosMododel(models.Model):
-#     id = 
-#     author = 
-#     title = 
-#     youtubr_link =
-#     pub_date = 
-#     update_date =  
+class VideosMododel(models.Model):
+    id = models.AutoField(primary_key=True)
+    author = models.ForeignKey(User, models.SET_NULL, null=True)
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length=300)
+    youtubr_link = models.TextField()
+    pub_date = models.DateTimeField(auto_now_add=True)
+    update_date =  models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.title + ' - '+ str(self.pub_date)
     
     
     

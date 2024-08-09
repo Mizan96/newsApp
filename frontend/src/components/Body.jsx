@@ -6,14 +6,17 @@ import NewsList from "./body/NewsList";
 import Videos from "./Videos";
 import { useSelector, useDispatch } from "react-redux";
 import getNewsFromServer from "../store/article-actions";
+import getVideosFromServer from "../store/videos-action";
 
 function Body() {
-
- const articles = useSelector((state) => state.data)
+  const articles = useSelector((state) => state.news.data);
+  const videos = useSelector((state) => state.videos.data);
+  console.log(videos);
   const dispatch = useDispatch();
 
   useEffect(() => {
-   dispatch(getNewsFromServer());
+    dispatch(getNewsFromServer());
+    dispatch(getVideosFromServer());
   }, [dispatch]);
 
   return (
@@ -30,22 +33,27 @@ function Body() {
 
         <Row className="border-bottom p-2">
           <p className="display-6 text-primary">Latest News</p>
-          {articles.length>0 && articles.map((article) => {
-            return (
-              <Col lg={3} className="my-2">
-                <NewsList image={article.image} title={article.title} article={article.article}/>
-              </Col>
-            )
-          })}
+          {articles.length > 0 &&
+            articles.map((article) => {
+              return (
+                <Col lg={3} className="my-2">
+                  <NewsList
+                    key={article.id}
+                    image={article.image}
+                    title={article.title}
+                    article={article.article}
+                  />
+                </Col>
+              );
+            })}
         </Row>
 
         <Row>
           <Container>
             <p className="display-6 text-primary">Videos</p>
-
-            <Videos />
-            <Videos />
-            <Videos />
+            {videos.map((video) => (
+              <Videos videoSource={video.youtubr_link} />
+            ))}
           </Container>
         </Row>
       </Container>

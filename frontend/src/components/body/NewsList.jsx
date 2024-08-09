@@ -1,21 +1,20 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Image1 from '../../assets/prothomalo-bangla_2024-07-31_7ycrw77i_2.webp'
+import { Image } from 'react-bootstrap';
 
-function NewsList() {
+function NewsList({image, title, article}) {
   return (
+    <>
     <Card id="newsCard">
-      <Card.Img variant="top" src={Image1} />
+      <Card.Img variant="top" src={`http://127.0.0.1:8000${image}`} alt={image}/>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
+        <Card.Title>{title.slice(0,40)}</Card.Title>
+        <Card.Text>{ article.slice(0,90) }</Card.Text>
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
+    </>
   )
 }
 

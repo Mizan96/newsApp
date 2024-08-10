@@ -2,8 +2,9 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-function NewsList({image, title, article}) {
+function NewsList({image, title, article, id}) {
   return (
     <>
     <Card id="newsCard">
@@ -11,7 +12,7 @@ function NewsList({image, title, article}) {
       <Card.Body>
         <Card.Title>{title.slice(0,40)}</Card.Title>
         <Card.Text>{ article.slice(0,90) }</Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Link to={`/news/${id}/`}><Button variant="primary" >বিস্তারিত</Button></Link>
       </Card.Body>
     </Card>
     </>

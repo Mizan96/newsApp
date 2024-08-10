@@ -39,6 +39,7 @@ function Body() {
                 <Col lg={3} className="my-2">
                   <NewsList
                     key={article.id}
+                    id={article.id}
                     image={article.image}
                     title={article.title}
                     article={article.article}

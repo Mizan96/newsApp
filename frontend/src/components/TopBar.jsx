@@ -16,7 +16,7 @@ function TopBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <LinkContainer to="/news">
+            <LinkContainer to="/">
               <Nav.Link> সর্বশেষ </Nav.Link>
             </LinkContainer>
             <LinkContainer to="/news">  

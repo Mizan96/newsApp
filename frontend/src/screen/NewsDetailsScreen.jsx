@@ -26,7 +26,7 @@ function NewsDetailsScreen() {
         {/* <p>{data.category}</p> */}
         <h1 className='display-6'>{data.title}</h1>
         <div className='border'></div>
-        <img  className='rounded my-2 mx-auto d-block'  src={`http://127.0.0.1:8000${data.image}` } />
+        <img  className='rounded my-2 mx-auto d-block'  src={data.image} />
         <p>{data.description}</p>
         <div className='border'></div>
         <p className='py-2 text-justify'>{data.article}</p>

@@ -5,10 +5,11 @@ import { Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function NewsList({image, title, article, id}) {
+  // console.log(`'${image}'`);
   return (
     <>
     <Card id="newsCard">
-      <Card.Img variant="top" src={`http://127.0.0.1:8000${image}`} alt={image}/>
+      <Card.Img variant="top" src={image} alt={image}/>
       <Card.Body>
         <Card.Title>{title.slice(0,40)}</Card.Title>
         <Card.Text>{ article.slice(0,90) }</Card.Text>

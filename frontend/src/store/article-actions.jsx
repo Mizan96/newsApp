@@ -5,7 +5,7 @@ import axios from "axios";
 const getNewsFromServer = () => {
     return async (dispatch) => {
         const fetchNews = async () => {
-            const response  = await axios.get('http://127.0.0.1:8000/api/articles/');
+            const response  = await axios.get('/api/articles/');
             return response.data
         }
 

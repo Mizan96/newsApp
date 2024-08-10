@@ -11,7 +11,6 @@ import getVideosFromServer from "../store/videos-action";
 function Body() {
   const articles = useSelector((state) => state.news.data);
   const videos = useSelector((state) => state.videos.data);
-  console.log(videos);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -34,7 +33,7 @@ function Body() {
         <Row className="border-bottom p-2">
           <p className="display-6 text-primary">Latest News</p>
           {articles.length > 0 &&
-            articles.map((article) => {
+            articles.slice(0).reverse().map((article) => {
               return (
                 <Col lg={3} className="my-2">
                   <NewsList
@@ -52,7 +51,7 @@ function Body() {
         <Row>
           <Container>
             <p className="display-6 text-primary">Videos</p>
-            {videos.map((video) => (
+            {videos.slice(0).reverse().map((video) => (
               <Videos videoSource={video.youtubr_link} />
             ))}
           </Container>

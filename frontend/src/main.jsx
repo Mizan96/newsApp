@@ -7,10 +7,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import NewsDetailsScreen from './screen/NewsDetailsScreen.jsx'
 import {Provider}  from 'react-redux';
 import store from './store/store.jsx'
+import NewsCategory from './components/body/NewsCategory.jsx';
 
 const router = createBrowserRouter([
   {path:'/', element:<App/>},
-  {path: '/news/:id', element: <NewsDetailsScreen />},
+  {path: '/news/detail/:id', element: <NewsDetailsScreen />},
+  {path: '/news/:category', element: <NewsCategory />}
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

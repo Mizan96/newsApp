@@ -1,7 +1,5 @@
-import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function NewsList({image, title, article, id}) {
@@ -13,7 +11,7 @@ function NewsList({image, title, article, id}) {
       <Card.Body>
         <Card.Title>{title.slice(0,40)}</Card.Title>
         <Card.Text>{ article.slice(0,90) }</Card.Text>
-        <Link to={`/news/${id}/`}><Button variant="primary" >বিস্তারিত</Button></Link>
+        <Link to={`/news/detail/${id}/`}><Button variant="primary" >বিস্তারিত</Button></Link>
       </Card.Body>
     </Card>
     </>

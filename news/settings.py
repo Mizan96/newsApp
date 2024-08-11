@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6k_!wl)!p8(j_z9$bqd$6cs1!e11tm=du36g91po(p-_6^ue!7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,7 +76,7 @@ ROOT_URLCONF = 'news.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR.joinpath('frontend','build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -137,8 +137,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL =  'static/'
+STATIC_URL = '/static/' 
 MEDIA_URL =  '/images/'
+STATIC_ROOT = 'static'
+STATICFILES_DIRS = [
+    BASE_DIR.joinpath('frontend', 'build', 'static')
+]
 MEDIA_ROOT = BASE_DIR / 'static/images'
 
 # Default primary key field type

@@ -1,8 +1,7 @@
+import './App.css';
 import TopBar from './components/TopBar'
 import Bottom from './components/Bottom'
 import Body from './components/Body'
-import './App.css'
-
 function App() {
   return (
     <>
@@ -10,7 +9,7 @@ function App() {
     <Body />
     <Bottom />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

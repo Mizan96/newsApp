@@ -12,7 +12,7 @@ function AboveTop() {
       <br />
       <br />
         <Container>
-         <span className='text-primary fw-bold display-6'>দৈনিক বার্তা</span>
+         <span className='text-danger fw-bold display-6'>দৈনিক বার্তা</span>
         <p>{daysName[currentTime.getDay()+1]} | জুলাই ৩১, ২০২৪  </p>
         </Container>
     </div>

@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import Bottom from "../Bottom";
 import TopBar from "../TopBar";
-import { Card, Button, Row, Col, Container } from "react-bootstrap";
-import { Link, useParams } from "react-router-dom";
+import { Row, Col, Container } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import getCategoryFromServer from "../../store/category-list-action";
 import NewsList from "./NewsList";
@@ -23,7 +23,7 @@ function NewsCategory() {
 
      
       <Row className="border-bottom p-2">
-          <p className="display-6 text-primary">Latest News</p>
+          <p className="display-6 text-danger py-2">{category}</p>
           {articles.length > 0 &&
             articles.slice(0).reverse().map((article) => {
               return (

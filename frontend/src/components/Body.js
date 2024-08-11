@@ -31,7 +31,7 @@ function Body() {
         </Row>
 
         <Row className="border-bottom p-2">
-          <p className="display-6 text-primary">Latest News</p>
+          <p className="display-6 text-danger py-2">সাম্প্রতিক সংবাদ</p>
           {articles.length > 0 &&
             articles.slice(0).reverse().map((article) => {
               return (
@@ -50,7 +50,7 @@ function Body() {
 
         <Row>
           <Container>
-            <p className="display-6 text-primary">Videos</p>
+            <p className="display-6 text-danger py-2">ভিডিও</p>
             {videos.slice(0).reverse().map((video) => (
               <Videos videoSource={video.youtubr_link} />
             ))}

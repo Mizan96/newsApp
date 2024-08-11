@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 function NewsList({image, title, article, id}) {
-  // console.log(`'${image}'`);
   return (
     <>
     <Card id="newsCard">

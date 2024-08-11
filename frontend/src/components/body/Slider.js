@@ -1,16 +1,16 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import s1 from "../../assets/prothomalo-bangla_2024-07-31_7ycrw77i_2.webp";
-import s2 from "../../assets/prothomalo-bangla_2024-07-31_nxnlam74_1.webp";
-import s3 from "../../assets/prothomalo-bangla_2024-07-31_y7fz89wh_6.webp";
-import s4 from '../../assets/prothomalo-bangla_2024-07-31_qmsjec8q_3.webp';
-import s5 from '../../assets/prothomalo-bangla_2024-07-31_y0rzkagj_4.webp';
+import s1 from "../../images/prothomalo-bangla_2024-07-31_7ycrw77i_2.webp";
+import s2 from "../../images/prothomalo-bangla_2024-07-31_nxnlam74_1.webp";
+import s3 from "../../images/prothomalo-bangla_2024-07-31_y7fz89wh_6.webp";
+import s4 from '../../images/prothomalo-bangla_2024-07-31_qmsjec8q_3.webp';
+import s5 from '../../images/prothomalo-bangla_2024-07-31_y0rzkagj_4.webp';
 
 function Slider() {
   return (
     <Carousel id="slider" data-bs-theme="dark">
       <Carousel.Item>
-        <img className="d-block w-100" src={s1} alt="First slide" />
+        <img className="d-block w-100 filter" src={s1} alt="First slide" />
         <Carousel.Caption>
           <p>
             চলছে আমন ধান রোপণের মৌসুম। ধানের চারা রোপণে ব্যস্ত সময় পার করছেন

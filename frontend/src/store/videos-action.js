@@ -5,7 +5,7 @@ import axios from "axios";
 const getVideosFromServer = () => {
     return async (dispatch) => {
         const fetchVideos = async () => {
-            const response = await axios.get('http://127.0.0.1:8000/api/videos/');
+            const response = await axios.get('api/videos/');
             return response.data;
         }
 

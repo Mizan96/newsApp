@@ -1,10 +1,8 @@
-import { Container, Modal, Navbar, NavDropdown } from "react-bootstrap";
+import { Button, Container, Navbar } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import AboveTop from "./AboveTop";
-import ModalContainer from "./ModalContainer";
 import { Link } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
-// import Navbar from 'react-bootstrap/Navbar';
 
 function TopBar() {
   return (
@@ -27,30 +25,17 @@ function TopBar() {
                 <LinkContainer to="/news/বিশ্ব/">
                   <Nav.Link>বিশ্ব</Nav.Link>
                 </LinkContainer>
-                {/* <NavDropdown title="বিশ্ব" id="basic-nav-dropdown">
-                  <LinkContainer to="/news">
-                    <NavDropdown.Item>বিশ্ব</NavDropdown.Item>
-                  </LinkContainer>
-                  <LinkContainer to="/news">
-                    <NavDropdown.Item>বিশ্ব</NavDropdown.Item>
-                  </LinkContainer>
-                  <NavDropdown.Item href="#action/3.3"></NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <LinkContainer to="/news">
-                    <NavDropdown.Item href="#action/3.4">
-                      বিশ্ব
-                    </NavDropdown.Item>
-                  </LinkContainer>
-                </NavDropdown> */}
                 <LinkContainer to="/news/মতামত/">
                   <Nav.Link>মতামত</Nav.Link>
                 </LinkContainer>
               </Nav>
-              <ModalContainer />
+              <Link to="/admin/">
+                <Button className="danger">লগইন</Button>
+              </Link>
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <section className="bg-primary">Breaking NEWS</section>
+        <section className="bg-danger">Breaking NEWS</section>
       </div>
       <AboveTop />
     </>

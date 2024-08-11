@@ -1,7 +1,6 @@
 import { Button, Container, Navbar } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import AboveTop from "./AboveTop";
-import { Link } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 
 function TopBar() {
@@ -29,9 +28,7 @@ function TopBar() {
                   <Nav.Link>মতামত</Nav.Link>
                 </LinkContainer>
               </Nav>
-              <Link to="/admin/">
-                <Button className="danger">লগইন</Button>
-              </Link>
+                <Button className="danger" onClick={() => {window.location.href="/admin"}}>লগইন</Button>
             </Navbar.Collapse>
           </Container>
         </Navbar>

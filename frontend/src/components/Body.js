@@ -22,12 +22,7 @@ function Body() {
     <div id="body">
       <Container>
         <Row className="border-bottom py-2 border-2">
-          <Col className="border-end px-2 border-2" lg={6} md={12}>
             <Slider />
-          </Col>
-          <Col lg={6} md={12}>
-            <TabContainer />
-          </Col>
         </Row>
 
         <Row className="border-bottom p-2">

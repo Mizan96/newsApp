@@ -14,16 +14,6 @@ import {
 function NewsList({image, title, article, id}) {
   return (
     <>
-    {/* <Card id="newsCard">
-      <Card.Img variant="top" src={image} alt={image}/>
-      <Card.Body>
-        <Card.Title>{title.slice(0,40)}</Card.Title>
-        <Card.Text>{ article.slice(0,90) }</Card.Text>
-        <Link to={`/news/detail/${id}/`}><Button variant="primary" >বিস্তারিত</Button></Link>
-      </Card.Body>
-    </Card> */}
-
-
     <MDBCard>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
         <MDBCardImage src={image} fluid alt={image} />

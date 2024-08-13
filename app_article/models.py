@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timesince
 
 # Create your models here.
 class NewsCategoryModel(models.Model):
@@ -10,7 +11,9 @@ class NewsCategoryModel(models.Model):
     author = models.ForeignKey(User, models.SET_NULL, null=True)
     
     def __str__(self):
-        return self.category + ' - Published: ' + str(self.pub_date) + ' - Updated : ' + str(self.update_date) 
+        return self.category + ' - Published: ' + str(self.pub_date) + ' - Updated : ' + str(self.update_date)
+    
+     
 
 class NewsModel(models.Model):
     id = models.AutoField(primary_key=True)
@@ -29,6 +32,11 @@ class NewsModel(models.Model):
     
     def __str__(self):
         return self.title + ' - Published: ' + str(self.pub_date) + ' - Updated : ' + str(self.update_date)
+    
+    @property
+    def timesince(self):
+        return timesince.timesince(self.pub_date)
+    
     
 class VideosMododel(models.Model):
     id = models.AutoField(primary_key=True)
